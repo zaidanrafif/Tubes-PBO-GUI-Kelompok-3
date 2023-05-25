@@ -12,5 +12,7 @@ public class PerpustakaanKampus {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        MenuHome home = new MenuHome();
+        home.setVisible(true);
     }
 }
