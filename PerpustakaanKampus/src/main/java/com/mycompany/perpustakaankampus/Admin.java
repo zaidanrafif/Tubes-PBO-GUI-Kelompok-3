@@ -8,6 +8,9 @@ package com.mycompany.perpustakaankampus;
  *
  * @author User
  */
-public class DatabaseMember {
-    
+public class Admin extends Guest implements Logout {
+    @Override
+    public void logoutAkun() {
+        
+    }
 }
