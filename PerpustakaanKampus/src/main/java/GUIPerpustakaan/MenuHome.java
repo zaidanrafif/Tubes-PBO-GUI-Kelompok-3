@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.perpustakaankampus;
+package GUIPerpustakaan;
+
+import ControllerPerpustakaan.ControllerApp;
 
 /**
  *
@@ -13,8 +15,12 @@ public class MenuHome extends javax.swing.JFrame {
     /**
      * Creates new form MenuHome
      */
+    ControllerApp ck;
+    
     public MenuHome() {
         initComponents();
+        ck = new ControllerApp(this);
+        RahasiaButton.setVisible(false);
     }
 
     /**
@@ -50,6 +56,7 @@ public class MenuHome extends javax.swing.JFrame {
         TahunTerbitBukuRec8 = new javax.swing.JLabel();
         AbstrakBukuRec8 = new javax.swing.JLabel();
         ViewBukuRec5 = new javax.swing.JButton();
+        RahasiaButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +72,11 @@ public class MenuHome extends javax.swing.JFrame {
 
         ListSemuaBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ListSemuaBukuButton.setText("List Semua Buku");
+        ListSemuaBukuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListSemuaBukuButtonActionPerformed(evt);
+            }
+        });
 
         RekomendasiLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         RekomendasiLabel.setText("Rekomendasi Buku");
@@ -129,6 +141,9 @@ public class MenuHome extends javax.swing.JFrame {
         ViewBukuRec5.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         ViewBukuRec5.setText("View");
 
+        RahasiaButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        RahasiaButton.setText("Button Rahasia");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -173,7 +188,9 @@ public class MenuHome extends javax.swing.JFrame {
                                         .addComponent(BukuRec5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(ViewBukuRec5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(74, 74, 74)
-                                .addComponent(ListSemuaBukuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ListSemuaBukuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(RahasiaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(200, 212, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -195,7 +212,10 @@ public class MenuHome extends javax.swing.JFrame {
                 .addComponent(ViewBukuRec1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ListSemuaBukuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(ListSemuaBukuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(RahasiaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(BukuRec2)
                         .addGap(3, 3, 3)
@@ -236,7 +256,13 @@ public class MenuHome extends javax.swing.JFrame {
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
+        ck.loginMember();
     }//GEN-LAST:event_LoginButtonActionPerformed
+
+    private void ListSemuaBukuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListSemuaBukuButtonActionPerformed
+        // TODO add your handling code here:
+        RahasiaButton.setVisible(true);
+    }//GEN-LAST:event_ListSemuaBukuButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,6 +313,7 @@ public class MenuHome extends javax.swing.JFrame {
     private javax.swing.JLabel Header;
     private javax.swing.JButton ListSemuaBukuButton;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JButton RahasiaButton;
     private javax.swing.JLabel RekomendasiLabel;
     private javax.swing.JLabel TahunTerbitBukuRec1;
     private javax.swing.JLabel TahunTerbitBukuRec2;

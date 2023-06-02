@@ -4,10 +4,28 @@
  */
 package ControllerPerpustakaan;
 
+import GUIPerpustakaan.MenuHome;
+import GUIPerpustakaan.MenuLogin;
+
 /**
  *
  * @author User
  */
 public class ControllerApp {
-    MenuHome home = new MenuHome();
+    private MenuHome home;
+    private MenuLogin login = new MenuLogin();
+    
+    public ControllerApp(MenuHome home) {
+        this.home = home;
+    }
+    
+    public void loginMember() {
+        home.setVisible(false);
+        login.setVisible(true);
+    }
+    
+    public void loginMahasiswa() {
+        //test
+        login.setText();
+    }
 }
