@@ -14,6 +14,14 @@ public class Mahasiswa extends Guest implements Logout {
     private String nama;
     private String nim;
     
+    public void meminjamBuku() {}
+    
+    public void mengembalikanBuku() {}
+    
+    public void memperpanjangBuku() {}
+    
+    public void lihatRiwayat() {}
+    
     @Override
     public void logoutAkun() {
         

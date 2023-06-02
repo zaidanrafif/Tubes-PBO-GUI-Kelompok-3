@@ -9,6 +9,23 @@ package com.mycompany.perpustakaankampus;
  * @author User
  */
 public class Admin extends Guest implements Logout {
+    private String username;
+    private String password;
+    private String nama;
+    private String nim;
+    
+    public void menambahBuku() {}
+    
+    public void menghapusBuku() {}
+    
+    public void updateBuku() {}
+    
+    public void konfirmasiPeminjaman() {}
+    
+    public void konfirmasiPengembalian() {}
+    
+    public void membuatLaporan() {}
+    
     @Override
     public void logoutAkun() {
         

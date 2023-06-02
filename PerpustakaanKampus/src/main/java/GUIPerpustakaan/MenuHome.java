@@ -29,7 +29,7 @@ public class MenuHome extends javax.swing.JFrame {
         Header = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
         ListSemuaBukuButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        RekomendasiLabel = new javax.swing.JLabel();
         BukuRec1 = new javax.swing.JLabel();
         TahunTerbitBukuRec1 = new javax.swing.JLabel();
         AbstrakBukuRec1 = new javax.swing.JLabel();
@@ -57,12 +57,17 @@ public class MenuHome extends javax.swing.JFrame {
         Header.setText("Perpustakaan Kampus");
 
         LoginButton.setText("Login");
+        LoginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginButtonActionPerformed(evt);
+            }
+        });
 
         ListSemuaBukuButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ListSemuaBukuButton.setText("List Semua Buku");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Rekomendasi Buku");
+        RekomendasiLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        RekomendasiLabel.setText("Rekomendasi Buku");
 
         BukuRec1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         BukuRec1.setText("Buku 1");
@@ -138,7 +143,7 @@ public class MenuHome extends javax.swing.JFrame {
                         .addGap(23, 23, 23))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addComponent(RekomendasiLabel)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(20, 20, 20)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -179,7 +184,7 @@ public class MenuHome extends javax.swing.JFrame {
                     .addComponent(LoginButton, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Header, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(RekomendasiLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(BukuRec1)
                 .addGap(3, 3, 3)
@@ -229,40 +234,44 @@ public class MenuHome extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MenuHome().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(MenuHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new MenuHome().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AbstrakBukuRec1;
@@ -278,6 +287,7 @@ public class MenuHome extends javax.swing.JFrame {
     private javax.swing.JLabel Header;
     private javax.swing.JButton ListSemuaBukuButton;
     private javax.swing.JButton LoginButton;
+    private javax.swing.JLabel RekomendasiLabel;
     private javax.swing.JLabel TahunTerbitBukuRec1;
     private javax.swing.JLabel TahunTerbitBukuRec2;
     private javax.swing.JLabel TahunTerbitBukuRec6;
@@ -288,6 +298,5 @@ public class MenuHome extends javax.swing.JFrame {
     private javax.swing.JButton ViewBukuRec3;
     private javax.swing.JButton ViewBukuRec4;
     private javax.swing.JButton ViewBukuRec5;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

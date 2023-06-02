@@ -12,18 +12,18 @@ public class Guest {
     public Guest() {}
     
     public void lihatDaftarBuku() {
-        
+        //Perlu akses ke class DatabaseBuku
     }
     
     public void login() {
-        
+        //perlu akses ke class DatabaseMember
     }
     
     public void cariBuku() {
-        
+        //Perlu akses ke class Buku
     }
     
     public void lihatDetailBuku() {
-        
+        //Perlu akses ke class Riwayat
     }
 }
